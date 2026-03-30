@@ -1,0 +1,27 @@
+components:
+- components:
+  - event_bindings: {}
+    layout_properties: {grid_position: 'RCFNSJ,AATWSC'}
+    name: auto_clear_check
+    properties: {text: 解析後にURLを自動でクリアする}
+    type: CheckBox
+  - layout_properties: {grid_position: 'GWUIRD,GRZEPY'}
+    name: cookie_input
+    properties: {height: 104.39999389648438, placeholder: ここにクッキーの内容（Netscape形式など）を貼り付けてください, text: ''}
+    type: TextArea
+  layout_properties: {grid_position: 'SPYBOJ,ZYVEVE'}
+  name: settings_panel
+  properties: {}
+  type: ColumnPanel
+- event_bindings: {}
+  layout_properties: {grid_position: 'ZVGBTM,DMJVWZ'}
+  name: back_btn
+  properties: {text: 保存して戻る}
+  type: Button
+- event_bindings: {}
+  layout_properties: {grid_position: 'ZVGBTM,NMJTZX'}
+  name: cancel_btn
+  properties: {text: キャンセル}
+  type: Button
+container: {type: ColumnPanel}
+is_package: true
