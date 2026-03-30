@@ -1,14 +1,32 @@
 components:
 - components:
-  - layout_properties: {width: 145.5999755859375, x: 7.52499847486615, y: 485.150006104261}
-    name: label_1
-    properties: {italic: true, text: ＜ダウンロード情報＞}
+  - layout_properties: {grid_position: 'NNRFIN,PDFSCA TCOEZG,NBPOSK'}
+    name: account_label
+    properties: {align: left, font_size: 10, icon: 'fa:user', underline: true}
     type: Label
-  - layout_properties: {width: 273.7875061035156, x: 255.750019837171, y: 55}
+  - event_bindings: {}
+    layout_properties: {grid_position: 'NNRFIN,PDFSCA AAFZKM,VXPHZH'}
+    name: login_btn
+    properties: {align: right, icon: 'fa:user-circle', role: tonal-button, text: ログイン / 登録, underline: true}
+    type: Button
+  - event_bindings: {click: settings_btn_click}
+    layout_properties: {grid_position: 'NNRFIN,PDFSCA IDKTEH,ZUGNUW'}
+    name: settings_btn
+    properties: {align: right, icon: 'fa:cog', role: tonal-button, text: 設定}
+    type: Button
+  - layout_properties: {grid_position: 'NNRFIN,EYPTHW HZAMLH,QWNKLN'}
     name: title_top
-    properties: {align: center, bold: true, font_size: 26, foreground: '#0c09ec', italic: true, text: フリー ダウンローダー}
+    properties:
+      align: center
+      bold: true
+      font_size: 26
+      foreground: '#0c09ec'
+      italic: true
+      spacing:
+        margin: [42, null, null, null]
+      text: ダウンローダー
     type: Label
-  - layout_properties: {width: 486.7999267578125, x: 153, y: 130}
+  - layout_properties: {grid_position: 'NNRFIN,EYPTHW RSOUEW,XJWZTQ'}
     name: explanation
     properties:
       background: '#7bd6f4'
@@ -19,8 +37,33 @@ components:
         　③ 解析が成功するとダウンロードができるようになります
         　　 ダウンロード形式を選択して「ダウンロード」ボタンを押してください
         　④ 開いたページからダウンロードすることができます
+      spacing:
+        margin: [52, null, null, null]
     type: RichText
-  - layout_properties: {width: 720, x: 13, y: 520}
+  - event_bindings: {change: url_input_change}
+    layout_properties: {grid_position: 'NNRFIN,EYPTHW LNXMCD,QPFIWD'}
+    name: url_input
+    properties: {placeholder: URLを貼ってください}
+    type: TextBox
+  - layout_properties: {grid_position: 'NNRFIN,EYPTHW NBSBUX,CEZZYJ'}
+    name: format_dropdown
+    properties: {}
+    type: DropDown
+  - event_bindings: {click: btn_test}
+    layout_properties: {grid_position: 'NNRFIN,EYPTHW UUEPGF,FIOCCJ'}
+    name: download_btn
+    properties: {background: '#2196F3', bold: false, font: '', foreground: '#ffffff', icon: 'fa:search', italic: true, role: filled-button, text: 解析開始}
+    type: Button
+  - event_bindings: {}
+    layout_properties: {grid_position: 'NNRFIN,EYPTHW LUHBWF,BHCQVB'}
+    name: clear_btn
+    properties: {background: 'theme:On Primary', icon: 'fa:trash', italic: true, role: outlined-button, text: クリア, underline: false}
+    type: Button
+  - layout_properties: {grid_position: 'NNRFIN,EYPTHW RTUUOT,FANBRK'}
+    name: label_1
+    properties: {italic: true, text: ＜ダウンロード情報＞}
+    type: Label
+  - layout_properties: {grid_position: 'NNRFIN,EYPTHW MQQSBP,LHRHHB'}
     name: title_label
     properties:
       background: '#f5f5f5'
@@ -28,52 +71,11 @@ components:
         padding: [30, null, '30', null]
       visible: true
     type: Label
-  - layout_properties: {width: 150.4375, x: 11.18752746656537, y: 318.85001831129193}
-    name: title_downlord
-    properties: {align: right, text: ダウンロード リンク ：}
-    type: Label
-  - layout_properties: {width: 137.52500915527344, x: 24.100025940686464, y: 366.13752441480756}
-    name: title_downlord_format
-    properties: {align: right, text: ダウンロード 形式 ：}
-    type: Label
-  - layout_properties: {width: 460, x: 171.66252594068646, y: 365.48750000074506}
-    name: format_dropdown
-    properties: {}
-    type: DropDown
-  - event_bindings: {change: url_input_change}
-    layout_properties: {width: 460, x: 171.66252594068646, y: 311.05000000074506}
-    name: url_input
-    properties: {placeholder: URLを貼ってください}
-    type: TextBox
-  - event_bindings: {click: btn_test}
-    layout_properties: {width: 191.4499969482422, x: 195.500019837171, y: 426.4625061042607}
-    name: download_btn
-    properties: {background: '#2196F3', bold: false, font: '', foreground: '#ffffff', icon: 'fa:search', italic: true, role: filled-button, text: 解析開始}
-    type: Button
-  - event_bindings: {}
-    layout_properties: {width: 116.5875015258789, x: 419.250019837171, y: 427.13752441480756}
-    name: clear_btn
-    properties: {background: 'theme:On Primary', icon: 'fa:trash', italic: true, role: outlined-button, text: クリア, underline: false}
-    type: Button
-  - layout_properties: {width: 312, x: 5.45003204420209, y: 0}
-    name: account_label
-    properties: {align: left, font_size: 10, icon: 'fa:user', underline: true}
-    type: Label
-  - event_bindings: {click: settings_btn_click}
-    layout_properties: {width: 99.9875030517578, x: 645.850025940687, y: 47.6500003822148}
-    name: settings_btn
-    properties: {icon: 'fa:cog', role: tonal-button, text: 設定}
-    type: Button
-  - event_bindings: {}
-    layout_properties: {width: 169.0749969482422, x: 578, y: 2}
-    name: login_btn
-    properties: {align: right, icon: 'fa:user-circle', role: tonal-button, text: ログイン / 登録, underline: true}
-    type: Button
-  layout_properties: {grid_position: 'YZYPAV,TDBPJP'}
-  name: xy_panel_1
-  properties: {height: '600', visible: true}
-  type: XYPanel
+  layout_properties: {grid_position: 'LVXIOZ,HHEXNZ'}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
 container:
-  properties: {background: '#FFFEF0', col_spacing: medium, col_widths: '{}', visible: true}
+  properties: {background: '#FFFEF0'}
   type: ColumnPanel
 is_package: true
