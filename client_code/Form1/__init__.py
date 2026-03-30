@@ -29,6 +29,7 @@ class Form1(Form1Template):
         self.account_label.text = ""
         self.account_label.visible = False
 
+  @handle("login_btn", "click")
   def login_btn_click(self, **event_args):
     """ログイン・ログアウトの処理"""
     if anvil.users.get_user():
@@ -47,6 +48,7 @@ class Form1(Form1Template):
     if not self.url_input.text:
       self.reset_download_button()
 
+  @handle("clear_btn", "click")
   def clear_btn_click(self, **event_args):
     """入力をクリアしてリセット"""
     self.url_input.text = ""
